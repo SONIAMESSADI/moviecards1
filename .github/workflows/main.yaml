@@ -94,10 +94,10 @@ jobs:
          secret: ${{ secrets.TOKEN }}
          approvers: SONIAMESSADI
       - name: Download artifact from build job
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
          name: moviecards-java
-      - name: Deploy to Azure Web App
+      - name: Deploy to Azure Web app
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
